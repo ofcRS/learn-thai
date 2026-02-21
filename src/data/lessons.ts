@@ -34,10 +34,10 @@ export const consonantLessons: LessonDefinition[] = [
     type: "consonant",
     order: 1,
     characters: [
-      con("c-ก", "ก", "k", "Like 'k' in 'kite'", "ก is for ไก่ (kai) — chicken"),
-      con("c-จ", "จ", "ch", "Like 'ch' in 'church'", "จ is for จาน (chan) — plate"),
+      con("c-ก", "ก", "k", "Like 'k' in 'sky' (no puff of air)", "ก is for ไก่ (kai) — chicken"),
+      con("c-จ", "จ", "ch", "Between 'j' and 'ch' — softer than 'church'", "จ is for จาน (chan) — plate"),
       con("c-ด", "ด", "d", "Like 'd' in 'dog'", "ด is for เด็ก (dek) — child"),
-      con("c-ต", "ต", "t", "Like 't' in 'top'", "ต is for เต่า (tao) — turtle"),
+      con("c-ต", "ต", "t", "Like 't' in 'stop' (no puff of air)", "ต is for เต่า (tao) — turtle"),
       con("c-บ", "บ", "b", "Like 'b' in 'bat'", "บ is for ใบไม้ (bai-mai) — leaf"),
     ],
   },
@@ -48,7 +48,7 @@ export const consonantLessons: LessonDefinition[] = [
     type: "consonant",
     order: 2,
     characters: [
-      con("c-ป", "ป", "p", "Like 'p' in 'park'", "ป is for ปลา (pla) — fish"),
+      con("c-ป", "ป", "p", "Like 'p' in 'spot' (no puff of air)", "ป is for ปลา (pla) — fish"),
       con("c-อ", "อ", "o", "Like 'o' in 'oh'", "อ is for อ่าง (ang) — basin"),
       con("c-ง", "ง", "ng", "Like 'ng' in 'sing'", "ง is for งู (ngu) — snake"),
       con("c-น", "น", "n", "Like 'n' in 'nice'", "น is for หนู (nu) — mouse"),
@@ -133,7 +133,7 @@ export const consonantLessons: LessonDefinition[] = [
       con("c-ญ", "ญ", "y", "Like 'y' in 'yes'", "ญ is for หญิง (ying) — woman"),
       con("c-ณ", "ณ", "n", "Like 'n' in 'nice'", "ณ is for เณร (nen) — novice monk"),
       con("c-ฎ", "ฎ", "d", "Like 'd' in 'dog'", "ฎ is for ชฎา (cha-da) — headdress"),
-      con("c-ฏ", "ฏ", "t", "Like 't' in 'top'", "ฏ is for ปฏัก (pa-tak) — goad"),
+      con("c-ฏ", "ฏ", "t", "Like 't' in 'stop' (no puff of air)", "ฏ is for ปฏัก (pa-tak) — goad"),
     ],
   },
   {
@@ -161,7 +161,7 @@ export const vowelLessons: LessonDefinition[] = [
     type: "vowel",
     order: 1,
     characters: [
-      vow("v-ะ", "–ะ", "a", "Like 'u' in 'cut' (short)", "Short 'a' — quick and snappy"),
+      vow("v-ะ", "–ะ", "a", "Like 'a' in 'father' (short)", "Short 'a' — quick and snappy"),
       vow("v-า", "–า", "aa", "Like 'a' in 'father' (long)", "Long 'a' — stretch it out"),
       vow("v-ำ", "–ำ", "am", "Like 'um' in 'sum'", "Ends with an 'm' sound"),
       vow("v-ใ", "ใ–", "ai", "Like 'i' in 'Thai'", "The 'ai' sound — think 'Thai!'"),
@@ -203,7 +203,7 @@ export const vowelLessons: LessonDefinition[] = [
       vow("v-เะ", "เ–ะ", "e", "Like 'e' in 'bet' (short)", "Short 'e' — quick"),
       vow("v-เ", "เ–", "ee", "Like 'ay' in 'say' (long)", "Long 'ay' — stretch it"),
       vow("v-แะ", "แ–ะ", "ae", "Like 'a' in 'cat' (short)", "Short 'a' as in 'cat'"),
-      vow("v-แ", "แ–", "aee", "Like 'a' in 'bad' (longer)", "Long version of the 'cat' sound"),
+      vow("v-แ", "แ–", "aee", "Like 'a' in 'cat' (long)", "Long version of the 'cat' sound"),
     ],
   },
   {
