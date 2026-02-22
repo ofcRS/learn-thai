@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { PickCharacterQuestion } from "../../data/types";
+import { PlayButton } from "../PlayButton";
 
 interface PickCharacterProps {
   question: PickCharacterQuestion;
@@ -21,7 +22,10 @@ export function PickCharacter({ question, onAnswer }: PickCharacterProps) {
   return (
     <div className="quiz-question">
       <p className="quiz-prompt">{question.prompt}</p>
-      <div className="quiz-display-sound">{question.displaySound}</div>
+      <div className="quiz-char-audio">
+        <div className="quiz-display-sound">{question.displaySound}</div>
+        {question.audioUrl && <PlayButton audioUrl={question.audioUrl} />}
+      </div>
       <div className="quiz-options quiz-options-chars">
         {question.options.map((opt, i) => {
           let cls = "quiz-option quiz-option-char";

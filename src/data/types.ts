@@ -31,6 +31,7 @@ export interface LearnableCharacter {
   soundHint: string;
   memoryAid: string;
   type: CharacterType;
+  audioUrl?: string;
 }
 
 export interface LessonDefinition {
@@ -49,6 +50,7 @@ export interface MultipleChoiceQuestion {
   kind: "multiple-choice";
   prompt: string;
   displayChar: string;
+  audioUrl?: string;
   options: string[];
   correctIndex: number;
 }
@@ -57,6 +59,7 @@ export interface PickCharacterQuestion {
   kind: "pick-character";
   prompt: string;
   displaySound: string;
+  audioUrl?: string;
   options: string[];
   correctIndex: number;
 }
@@ -73,6 +76,7 @@ export interface ClassSortQuestion {
   kind: "class-sort";
   prompt: string;
   displayChar: string;
+  audioUrl?: string;
   correctClass: ConsonantClass;
 }
 
@@ -80,6 +84,7 @@ export interface FinalSoundQuestion {
   kind: "final-sound";
   prompt: string;
   displayChar: string;
+  audioUrl?: string;
   options: string[];
   correctIndex: number;
 }

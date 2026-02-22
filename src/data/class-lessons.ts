@@ -1,5 +1,6 @@
 import type { LearnableCharacter, LessonDefinition } from "./types";
 import { consonants } from "./consonants";
+import { consonantAudio } from "./audio-urls";
 
 const classHints: Record<string, string> = {
   mid: "Mid class — gives mid tone by default",
@@ -17,6 +18,7 @@ function toClassCharacter(c: (typeof activeConsonants)[number]): LearnableCharac
     soundHint: classHints[c.class],
     memoryAid: `${c.thaiName} — ${c.meaning}`,
     type: "consonant",
+    audioUrl: consonantAudio[c.thai],
   };
 }
 

@@ -23,9 +23,10 @@ function pickRandom<T>(arr: T[], count: number, exclude?: T[]): T[] {
 }
 
 // Get all characters of the same type for distractor selection
+// Exclude class/final lessons whose "sound" field is a class name or final sound, not a phoneme
 function getDistractorPool(char: LearnableCharacter): LearnableCharacter[] {
   return allLessons
-    .filter((l) => l.type === char.type)
+    .filter((l) => l.type === char.type && !l.track)
     .flatMap((l) => l.characters)
     .filter((c) => c.id !== char.id);
 }
@@ -57,6 +58,7 @@ function makeMultipleChoice(char: LearnableCharacter): MultipleChoiceQuestion {
     kind: "multiple-choice",
     prompt: "What sound does this character make?",
     displayChar: char.thai,
+    audioUrl: char.audioUrl,
     options: options.map((o) => o.sound),
     correctIndex,
   };
@@ -71,6 +73,7 @@ function makePickCharacter(char: LearnableCharacter): PickCharacterQuestion {
     kind: "pick-character",
     prompt: `Which character makes the "${char.sound}" sound?`,
     displaySound: char.soundHint,
+    audioUrl: char.audioUrl,
     options: options.map((o) => o.thai),
     correctIndex,
   };

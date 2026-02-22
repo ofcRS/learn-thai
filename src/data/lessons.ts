@@ -1,4 +1,5 @@
 import type { LearnableCharacter, LessonDefinition } from "./types";
+import { consonantAudio, vowelAudio } from "./audio-urls";
 import { classLessons } from "./class-lessons";
 import { finalSoundLessons } from "./final-sounds";
 
@@ -10,7 +11,7 @@ function con(
   soundHint: string,
   memoryAid: string,
 ): LearnableCharacter {
-  return { id, thai, sound, soundHint, memoryAid, type: "consonant" };
+  return { id, thai, sound, soundHint, memoryAid, type: "consonant", audioUrl: consonantAudio[thai] };
 }
 
 // Helper to create vowel characters
@@ -21,7 +22,7 @@ function vow(
   soundHint: string,
   memoryAid: string,
 ): LearnableCharacter {
-  return { id, thai, sound, soundHint, memoryAid, type: "vowel" };
+  return { id, thai, sound, soundHint, memoryAid, type: "vowel", audioUrl: vowelAudio[id] };
 }
 
 // ─── CONSONANT LESSONS ──────────────────────────────────────

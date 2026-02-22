@@ -28,6 +28,7 @@ export function generateClassQuiz(lesson: LessonDefinition): QuizQuestion[] {
       kind: "class-sort",
       prompt: "What class is this consonant?",
       displayChar: char.thai,
+      audioUrl: char.audioUrl,
       correctClass: char.sound as "low" | "mid" | "high",
     };
     questions.push(q);

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { LessonDefinition } from "../data/types";
+import { PlayButton } from "./PlayButton";
 
 interface LessonIntroProps {
   lesson: LessonDefinition;
@@ -25,7 +26,10 @@ export function LessonIntro({ lesson, onStartQuiz, onBack }: LessonIntroProps) {
       </div>
 
       <div className="intro-card">
-        <div className="intro-thai">{char.thai}</div>
+        <div className="intro-audio">
+          <div className="intro-thai">{char.thai}</div>
+          {char.audioUrl && <PlayButton audioUrl={char.audioUrl} />}
+        </div>
         <div className="intro-sound">{char.sound}</div>
         <div className="intro-hint">{char.soundHint}</div>
         <div className="intro-memory">{char.memoryAid}</div>

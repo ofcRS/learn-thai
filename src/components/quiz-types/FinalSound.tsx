@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { FinalSoundQuestion } from "../../data/types";
+import { PlayButton } from "../PlayButton";
 
 interface FinalSoundProps {
   question: FinalSoundQuestion;
@@ -21,7 +22,10 @@ export function FinalSound({ question, onAnswer }: FinalSoundProps) {
   return (
     <div className="quiz-question">
       <p className="quiz-prompt">{question.prompt}</p>
-      <div className="quiz-display-char">{question.displayChar}</div>
+      <div className="quiz-char-audio">
+        <div className="quiz-display-char">{question.displayChar}</div>
+        {question.audioUrl && <PlayButton audioUrl={question.audioUrl} />}
+      </div>
       <div className="final-sound-options">
         {question.options.map((opt, i) => {
           let cls = "final-sound-btn";

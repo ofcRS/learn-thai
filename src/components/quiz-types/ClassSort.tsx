@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { ClassSortQuestion } from "../../data/types";
+import { PlayButton } from "../PlayButton";
 
 interface ClassSortProps {
   question: ClassSortQuestion;
@@ -27,7 +28,10 @@ export function ClassSort({ question, onAnswer }: ClassSortProps) {
   return (
     <div className="quiz-question">
       <p className="quiz-prompt">{question.prompt}</p>
-      <div className="quiz-display-char">{question.displayChar}</div>
+      <div className="quiz-char-audio">
+        <div className="quiz-display-char">{question.displayChar}</div>
+        {question.audioUrl && <PlayButton audioUrl={question.audioUrl} />}
+      </div>
       <div className="class-sort-options">
         {classButtons.map((btn) => {
           let cls = `class-sort-btn ${btn.className}`;

@@ -1,5 +1,6 @@
 import type { LearnableCharacter, LessonDefinition } from "./types";
 import { consonants } from "./consonants";
+import { consonantAudio } from "./audio-urls";
 
 interface FinalSoundGroup {
   sound: string;
@@ -61,6 +62,7 @@ function buildCharacters(group: FinalSoundGroup): LearnableCharacter[] {
       soundHint: `At the end of a syllable, ${thai} sounds like '${group.sound.slice(1)}'`,
       memoryAid: `${raw.thaiName} — initial: ${raw.rtgs}, final: ${group.sound}`,
       type: "consonant",
+      audioUrl: consonantAudio[thai],
     });
   }
   return result;

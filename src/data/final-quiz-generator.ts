@@ -29,6 +29,7 @@ export function generateFinalQuiz(lesson: LessonDefinition): QuizQuestion[] {
       kind: "final-sound",
       prompt: "What sound does this make at the END of a syllable?",
       displayChar: char.thai,
+      audioUrl: char.audioUrl,
       options: [...allFinalSounds],
       correctIndex,
     };
